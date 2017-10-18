@@ -1,0 +1,436 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta http-equiv="Content-Language" content="uk" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Візи</title>
+<style type="text/css">
+.новыйСтиль1 {
+	font-family: "Courier New", Courier, monospace;
+	font-weight: bolder;
+	font-size: 316%;
+	font-style: normal;
+	font-variant: normal;
+	text-transform: uppercase;
+	color: #FFFFFF;
+}
+.новыйСтиль2 {
+	font-family: "Courier New", Courier, monospace;
+	font-size: 200px;
+	font-weight: bold;
+	color: #FFFFFF;
+	border-style: none;
+	padding: 0px;
+	margin: 0px;
+}
+.style1 {
+	font-family: "Courier New", Courier, monospace;
+	font-size: 40px;
+	font-weight: bold;
+	color: #FFFFFF;
+	border-style: none;
+	padding: 0px;
+	margin: 0px;
+}
+.style2 {
+	margin-right: 0px;
+}
+.новыйСтиль3 {
+	background-color: #000000;
+	font-family: "Courier New", Courier, monospace;
+	font-size: large;
+	color: #FFFFFF;
+}
+.новыйСтиль4 {
+	font-family: "Courier New", Courier, monospace;
+	font-size: x-large;
+}
+.новыйСтиль5 {
+	font-family: "Courier New", Courier, monospace;
+	font-size: 35px;
+	font-style: normal;
+	color: #FFFFFF;
+}
+#navbar ul{
+        display: none;
+        background-color: #113BAF;
+        position: absolute;
+        top: 100%;
+      }
+      #navbar li:hover ul { display: block; }
+      #navbar, #navbar ul{
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+      }
+      #navbar {
+        height: 30px;
+        background-color: #666;
+        padding-left: 25px;
+        min-width: 470px;
+      }
+      #navbar li {
+        float: left;
+        position: relative;
+        height: 100%;
+      }
+      #navbar li a {
+        display: block;
+        padding: 6px;
+        width: 100px;
+        color: #fff;
+        text-decoration: none;
+        text-align: center;
+      }
+      #navbar ul li { float: none; }
+      #navbar li:hover { background-color: #113BAF; }
+      #navbar ul li:hover { background-color: #666; }
+.style3 {
+	text-align: center;
+	font-size: xx-large;
+	font-family: "Courier New", Courier, monospace;
+}
+.style4 {
+	color: #666666;
+	font-size: 20pt;
+}
+.style5 {
+	font-size: large;
+}
+.style6 {
+	color: #808080;
+}
+.style7 {
+	border-style: solid;
+}
+.style8 {
+	border-style: solid;
+	border-width: 1px;
+	padding: 1px 4px;
+}
+.style9 {
+	text-align: center;
+	font-size: xx-large;
+	color: #FFFFFF;
+}
+.style10 {
+	text-align: center;
+}
+.style12 {
+	margin-top: 0px;
+}
+.style13 {
+	text-align: center;
+	font-size: xx-large;
+	color: #000000;
+}
+.style14 {
+				font-size: x-large;
+				color: #FFFFFF;
+}
+.style15 {
+				color: #FFFFFF;
+}
+#slider {
+      border: 5px solid #eaeaea;
+   box-shadow: 1px 1px 5px rgba(0,0,0,0.7);
+   height: 430px;
+   width: 1230px;
+   margin: 60px auto 0;
+   overflow: visible;
+   position: relative;
+}
+#mask {
+   overflow: hidden;
+   height: 320px;
+}
+#slider ul {
+   margin: 0;
+   padding: 0;
+   position: relative;
+}
+
+#slider li {
+   width: 680px;  /* Ширина изображения */
+   height: 460 px; /* Высота изображения */
+   position: absolute;
+   top: -325px;	/* Исходное положение  (за пределами слайдера) */
+   list-style: none;
+}
+#slider li.firstanimation {
+   animation: cycle 25s linear infinite;
+}
+
+#slider li.secondanimation {
+   animation: cycletwo 25s linear infinite;
+}
+
+#slider li.thirdanimation {
+   animation: cyclethree 25s linear infinite;
+}
+
+#slider li.fourthanimation {
+   animation: cyclefour 25s linear infinite;
+}
+
+#slider li.fifthanimation {
+   animation: cyclefive 25s linear infinite;
+}
+@keyframes cycle {
+   0%  { top: 0px; } /* При запуске слайдера, первое изображение уже видимо */
+   4%  { top: 0px; } /* Стартовая позиция */
+   16% { top: 0px; opacity:1; z-index:0; } /* С 4% до 16 % (3 секунды) изображение видимо */
+   20% { top: 325px; opacity: 0; z-index: 0; } /* с 16% до 20% (1 секунды)выход изображения*/
+   21% { top: -325px; opacity: 0; z-index: -1; } /* Возвращение на исходную позицию за пределами маски */
+   92% { top: -325px; opacity: 0; z-index: 0; }
+   96% { top: -325px; opacity: 0; } /* С 96% до 100% (1 секунда) – вход */
+   100%{ top: 0px; opacity: 1; }
+}
+
+@keyframes cycletwo {
+   0%  { top: -325px; opacity: 0; } /* Исходная позиция за пределами маски */
+   16% { top: -325px; opacity: 0; }/* Начало движения с 16% */
+   20% { top: 0px; opacity: 1; }
+   24% { top: 0px; opacity: 1; }  /* С 20% до 24% (в течении 1 секунды) — вход*/
+   36% { top: 0px; opacity: 1; z-index: 0; }   /* С 24% до 36 % (3 секунды) изображение видимо */
+   40% { top: 325px; opacity: 0; z-index: 0; } /* С 36% до 40% (1 секунда)— выход */
+   41% { top: -325px; opacity: 0; z-index: -1; }   /* Возврат на исходную позицию */
+   100%{ top: -325px; opacity: 0; z-index: -1; }
+}
+
+@keyframes cyclethree {
+   0%  { top: -325px; opacity: 0; }
+   36% { top: -325px; opacity: 0; }
+   40% { top: 0px; opacity: 1; }
+   44% { top: 0px; opacity: 1; }
+   56% { top: 0px; opacity: 1; }
+   60% { top: 325px; opacity: 0; z-index: 0; }
+   61% { top: -325px; opacity: 0; z-index: -1; }
+   100%{ top: -325px; opacity: 0; z-index: -1; }
+}
+
+@keyframes cyclefour {
+   0%  { top: -325px; opacity: 0; }
+   56% { top: -325px; opacity: 0; }
+   60% { top: 0px; opacity: 1; }
+   64% { top: 0px; opacity: 1; }
+   76% { top: 0px; opacity: 1; z-index: 0; }
+   80% { top: 325px; opacity: 0; z-index: 0; }
+   81% { top: -325px; opacity: 0; z-index: -1; }
+   100%{ top: -325px; opacity: 0; z-index: -1; }
+}
+@keyframes cyclefive {
+   0%  { top: -325px; opacity: 0; }
+   76% { top: -325px; opacity: 0; }
+   80% { top: 0px; opacity: 1; }
+   84% { top: 0px; opacity: 1; }
+   96% { top: 0px; opacity: 1; z-index: 0; }
+   100%{ top: 325px; opacity: 0; z-index: 0; }
+}
+.progress-bar {
+   position: relative;
+   top: -5px;
+   width: 680px;
+   height: 5px;
+   background: #000;
+   animation: fullexpand 25s ease-out infinite;
+}
+/* Строка состояния анимации */
+
+@keyframes fullexpand {
+   /* В этих ключевых кадрах анимация стационарна */
+   0%, 20%, 40%, 60%, 80%, 100% { width: 0%; opacity: 0; }
+
+   /* В этих — оживает */
+   4%, 24%, 44%, 64%, 84% { width: 0%; opacity: 0.3; }
+
+   /* В этих — плавно заполняется */
+   16%, 36%, 56%, 76%, 96% { width: 100%; opacity: 0.7; }
+
+   /* В этих ключевых кадрах индикатор выполнения завершил свой путь */
+   17%, 37%, 57%, 77%, 97% { width: 100%; opacity: 0.3; }
+
+   /* В этих ключевых кадрах индикатор выполнения исчезнет, а затем возобновит цикл */
+   18%, 38%, 58%, 78%, 98% { width: 100%; opacity: 0; }
+}
+#slider .tooltip {
+   background: rgba(0,0,0,0.7);
+   width: 300px;
+   height: 160px;
+   position: relative;
+   bottom: 75px;
+   left: -320px;
+}
+
+#slider .tooltip h1 {
+   color: #fff;
+   font-size: 24px;
+   font-weight: 300;
+   line-height: 60px;
+   padding: 0 0 0 10px;
+}
+#slider .tooltip {
+…
+   transition: all 0.3s ease-in-out;
+}
+
+#slider li#first: hover .tooltip,
+#slider li#second: hover .tooltip,
+#slider li#third: hover .tooltip,
+#slider li#fourth: hover .tooltip,
+#slider li#fifth: hover .tooltip {
+   left: 0px;
+}
+#slider: hover li,
+#slider: hover .progress-bar {
+   animation-play-state: paused;
+}
+</style>
+<script language="JavaScript">
+function setVisibility(id, visibility) {
+document.getElementById(id).style.display = visibility;
+}
+</script>
+</head>
+
+<body>
+
+<form id="form1" runat="server">
+
+<div>
+	<div style="border-style: none; border-width: 0px; position: absolute; width: 780px; height: 64px; z-index: 1; left: 329px; top: 222px" id="layer1" class="новыйСтиль1">
+		Візи.Робота за кордоном.</div>
+	<div style="border-style: none; position: absolute; width: 1140px; height: 100px; z-index: 2; left: 169px; top: 313px;" id="layer2" class="style1">
+		Безкоштовна консультація. 100% відкриття візи.</div>
+	<div style="position: absolute; width: 1339px; height: 35px; z-index: 3; left: 7px; top: 574px;   right: 104px; font-size: x-large;" id="layer3">
+	  <ul id="navbar">
+      <li><a href="#">Говна</a></li>
+      <li>
+		<a href="#" style="width: 161px; height: 18px;" onclick="javascript:window.location='C:/проект/2.htm'" >Наші послуги</a>
+       <ul>
+          <li><a href="#" style="width: 161px">Польські візи</a></li>
+          <li><a href="#"> США </a></li>
+          <li><a href="#"> Канада</a></li>
+        </ul></li>
+      <li><a href="#" onclick="javascript:window.location='C:/проект/3.htm'">Контакти</a>
+             </li>
+         </ul>
+         
+</div>
+	</div>
+	<img alt="Візи. Безкоштовна консультація" src="image2.png" width="1340" height="576" class="style2" /><div style="position: absolute; width: 100px; height: 100px; z-index: 4" id="layer5">
+	</div>
+</div>
+
+<div style="position: absolute; width: 150px; height: 291px; z-index: 5; left: 1030px; top: 621px; background-color: #000000; visibility: hidden" id="layer9">
+</div>
+
+<div style="position: absolute; width: 1338px; height: 426px; z-index: 6; left: 11px; top: 717px" id="layer10" class="style3">
+	<label id="Label1"><strong>Все для успішного відкриття візи!<br />
+	<span class="style4">Дізнайтеся більше!!!<br />
+	<br />
+	</span>
+	<div style="border-color: #666666; border-width: medium; position: absolute; width: 294px; height: 265px; z-index: 1; left: 143px; top: 137px;" id="layer13"  class="style7">
+		<img src="1.png" width="193" height="161" /><br />
+		</strong><span class="style5">Бронювання житла.<br />
+		<span class="style6">Пошук і бронювання житла <br />
+		для подорожі та подачі на візу.</span></span></div>
+	<strong>
+	<div style="border-width: medium; position: absolute; width: 296px; height: 261px; z-index: 1; left: 941px; top: 139px; border-color: #666666" id="layer12" class="style8">
+		<img src="3.png" width="190" height="180" /><br />
+		</strong><span class="style5">Страхівки.<br />
+		<span class="style6">Страхові полюси для<br />
+		всіх країн Європи.</span></span></div>
+	<strong>
+	<div style="border-width: medium; position: absolute; width: 293px; height: 262px; z-index: 1; left: 543px; top: 138px; border-color: #666666" id="layer11" class="style8">
+		<img src="2.png" width="222" height="165" /><br />
+		</strong><span class="style5">Авіабілети.<br />
+		<span class="style6">Пошук, бронь і викуп<br />
+		авіабілетів по самим<br />
+		низьким цінам.</span></span></div>
+	<br />
+	<br />
+	<br />
+	<strong><br />
+	<br />
+	<br />
+	<br />
+	<br />
+	<br />
+	<input name="Button1" type="button" value="Всі послуги" style="border: medium groove #808080; width: 208px; height: 47px; font-family: 'Courier New', Courier, monospace; font-size: x-large; background-color: #FFFFFF;  " onmouseover="colorchange('#A4A4A4')" onmouseout="colorchange('#FFFFFF')" onclick="javascript:window.location='C:/проект/2.htm'" /></strong><br />
+	</label></div>
+
+</form>
+
+<div style="position: absolute; width: 1387px; height: 498px; z-index: 7; left: -38px; top: 1225px; background-color: #333333; font-family: 'Courier New', Courier, monospace" id="layer14" class="style9">
+	<strong><br />
+	<div class="container" style="height: 450px; width: 1343px; left:300px">
+   <div id="content-slider" style="height: 450px;">
+      <div id="slider" style="height: 450px; left: -1px; top: -79px; width: 1000px">  <!-- Контейнер для слайдера -->
+         <div id="mask">  <!-- Маска -->
+
+         <ul style="left: 0px; top: 5px; height: 381px">
+         <li id="first" class="firstanimation" style="left: 393px; top: -325px; height: 694px">  <!-- ID для всплывающей подсказки и класс для анимации -->
+         <a href="#"> <img src="C:/проект/11.png" alt="Cougar"/> </a>
+         <div class="tooltip"> <h1>Страхування</h1> </div>
+         </li>
+
+         <li id="second" class="secondanimation" style="left: 393px; top: -325px; height: 450px">
+         <a href="#"> <img src="C:/проект/12.png" alt="Lions" width="529"/> </a>
+         <div class="tooltip" style="left: -320px; bottom: 152px"> <h1>Бронь авіабілетів</h1> </div>
+         </li>
+
+         <li id="third" class="thirdanimation" style="left: 393px; top: -325px; height: 450px">
+         <a href="#"> <img src="C:/проект/13.png" alt="Snowalker" width="587"/> </a>
+         <div class="tooltip" style="left: -347px; bottom: 178px"> <h1>Бронь 
+						авіабілетів. Підготовка туру. Пошук житла</h1>
+			</div>
+         </li>
+
+         <li id="fourth" class="fourthanimation" style="left: 393px; top: -325px; height: 550px">
+         <a href="#"> <img src="C:/проект/14.png" alt="Howling" height="367"/> </a>
+         <div class="tooltip" style="left: -315px; bottom: 121px"> <h1>Пошук і бронь житла.</h1> </div>
+         </li>
+
+         <li id="fifth" class="fifthanimation" style="left: 393px; top: -325px; height: 450px">
+         <a href="#"> <img src="C:/проект/15.png" alt="Sunbathing"/> </a>
+         <div class="tooltip" style="left: -307px; bottom: 178px"> <h1>Робоча 
+						віза. Воєводська віза. Шенген віза.</h1> </div>
+         </li>
+         </ul>
+
+         </div>  <!-- Конец маски -->
+         <div class="progress-bar" style="left: 1px; top: 103px"></div>  <!-- Строка выполнения-->
+      </div>  <!-- Конец контейнера для слайдера -->
+   </div>
+</div>
+</div>
+<div style="position: absolute; width: 1336px; height: 460px; z-index: 8; left: -3px; top: 1721px" id="layer17">
+	<form method="post">
+	</form>
+	<div style="border: thin solid #000000; position: absolute; width: 385px; height: 70px; z-index: 2; left: 530px; top: 314px; background-color: #333333; color: #FFFFFF;" id="layer19" class="style10">
+	<br />
+	<strong><span class="style14">
+	<a href="#callbackwidget"><span class="style15">Хочу безкоштовну консультацію</span></a></span></strong>
+	<br />
+	</div>
+	<img src="image2.png" width="1349" height="460" class="style12" /><div style="position: absolute; width: 803px; height: 150px; z-index: 1; left: 286px; top: 134px; font-family: 'Courier New', Courier, monospace; font-size: xx-large; color: #FFFFFF; font-weight: bold;" id="layer18" class="style13">
+		Залишилися запитання? <br />
+		Звертайтесь до наших консультантів!</div>
+</div>
+<script type="text/javascript">
+function colorchange(color){ 
+if (event.srcElement.type == "button")
+event.srcElement.style.backgroundColor=color;
+}
+</script>
+<!-- RedHelper -->
+<script id="rhlpscrtg" type="text/javascript" charset="utf-8" async="async" 
+	src="https://web.redhelper.ru/service/main.js?c=yulia97">
+</script> 
+<!--/Redhelper -->
+<link rel="stylesheet" href="https://cdn.envybox.io/widget/cbk.css">
+<script type="text/javascript" src="https://cdn.envybox.io/widget/cbk.js?wcb_code=002fbcede56551dbd704bbf4ba4b235e" charset="UTF-8" async nomaps></script>
+</body>
+</html>
